@@ -21,7 +21,7 @@
                 <div id="carouselOne" class="carousel slide" data-ride="carousel">
     
                     <div class="carousel-inner">
-                        <div class="carousel-item bg_cover" style="background-image: url(assets/images/slider-1.jpg)">
+                        <div class="carousel-item bg_cover" style="background-image: url(public/landingstyle/images/back1.jpg)">
                             <div class="carousel-caption">
                                 <div class="container">
                                     <div class="row justify-content-center">
@@ -29,7 +29,6 @@
                                             <h2 class="carousel-title">Refreshing Design &amp; Easy to Customize</h2>
                                             <ul class="carousel-btn rounded-buttons">
                                                 <li><a class="main-btn rounded-three" href="#">GET STARTED</a></li>
-                                                <li><a class="main-btn rounded-one" href="#">DOWNLOAD</a></li>
                                             </ul>
                                         </div>
                                     </div> <!-- row -->
@@ -37,7 +36,7 @@
                             </div> <!-- carousel caption -->
                         </div> <!-- carousel-item -->
 
-                        <div class="carousel-item bg_cover" style="background-image: url(assets/images/slider-2.jpg)">
+                        <div class="carousel-item bg_cover" style="background-image: url(public/landingstyle/images/back1.jpg)">
                             <div class="carousel-caption">
                                 <div class="container">
                                     <div class="row justify-content-center">
@@ -45,7 +44,6 @@
                                             <h2 class="carousel-title">Based on Latest Bootstrap &amp; HTML5</h2>
                                             <ul class="carousel-btn rounded-buttons">
                                                 <li><a class="main-btn rounded-three" href="#">GET STARTED</a></li>
-                                                <li><a class="main-btn rounded-one" href="#">DOWNLOAD</a></li>
                                             </ul>
                                         </div>
                                     </div> <!-- row -->
@@ -53,15 +51,14 @@
                             </div> <!-- carousel caption -->
                         </div> <!-- carousel-item -->
 
-                        <div class="carousel-item bg_cover active" style="background-image: url(assets/images/slider-3.jpg)">
+                        <div class="carousel-item bg_cover active" style="background-image: url(public/landingstyle/images/back1.jpg)">
                             <div class="carousel-caption">
                                 <div class="container">
                                     <div class="row justify-content-center">
                                         <div class="col-xl-6 col-lg-7 col-sm-10">
-                                            <h2 class="carousel-title">Multi-purpose Landing Page Template</h2>
+                                            <h2 class="carousel-title">Hello Human !!</h2></p>
                                             <ul class="carousel-btn rounded-buttons">
-                                                <li><a class="main-btn rounded-three" href="#">GET STARTED</a></li>
-                                                <li><a class="main-btn rounded-one" href="#">DOWNLOAD</a></li>
+                                                <li><a class="main-btn rounded-three" href="{{ route('login') }}">GET STARTED</a></li>
                                             </ul>
                                         </div>
                                     </div> <!-- row -->
@@ -70,13 +67,6 @@
                         </div> <!-- carousel-item -->
                     </div> <!-- carousel-inner -->
 
-                    <a class="carousel-control-prev" href="#carouselOne" role="button" data-slide="prev">
-                        <i class="lni-arrow-left-circle"></i>
-                    </a>
-
-                    <a class="carousel-control-next" href="#carouselOne" role="button" data-slide="next">
-                        <i class="lni-arrow-right-circle"></i>
-                    </a>
                 </div> <!-- carousel -->
             </div> <!-- bd-example -->
         </div>
