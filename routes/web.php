@@ -25,4 +25,6 @@ Route::get('/detail', function () {
 
 Route::get('/detailcourses', function () {
     return view('detailcourses');
+Route::get('/landing', function() {
+    return view('landing');
 });
