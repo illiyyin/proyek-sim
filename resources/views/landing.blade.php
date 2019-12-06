@@ -56,7 +56,7 @@
                                 <div class="container">
                                     <div class="row justify-content-center">
                                         <div class="col-xl-6 col-lg-7 col-sm-10">
-                                            <h2 class="carousel-title">Hello Human !!</h2></p>
+                                            <h2 class="carousel-title">Hello {{ Auth::user()->name }}</h2></p>
                                             <ul class="carousel-btn rounded-buttons">
                                                 <li><a class="main-btn rounded-three" href="{{ route('login') }}">GET STARTED</a></li>
                                             </ul>
