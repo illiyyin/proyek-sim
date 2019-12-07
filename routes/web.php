@@ -29,3 +29,9 @@ Route::get('/detailcourses', function () {
 Route::get('/landing', function() {
     return view('landing');
 });
+
+Route::get('/detailcourses', function(){
+    return view('detailcourses');
+});
+
+Route::post('/detailcourses', 'DetailcoursesController@save')->name('DetailcoursesController.save');
