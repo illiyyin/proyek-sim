@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
 
 Auth::routes();
@@ -25,13 +25,12 @@ Route::get('/detail', function () {
 
 Route::get('/detailcourses', function () {
     return view('detailcourses');
-});
-Route::get('/landing', function() {
-    return view('landing');
-});
-
-Route::get('/detailcourses', function(){
-    return view('detailcourses');
-});
+})->name('addcourses')->middleware('auth');
 
 Route::post('/detailcourses', 'DetailcoursesController@save')->name('DetailcoursesController.save');
+
+// Debugging landing page only
+// Route::get('/landing', function() {
+//     return view('landing');
+// });
+
