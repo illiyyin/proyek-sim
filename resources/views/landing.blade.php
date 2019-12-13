@@ -44,24 +44,6 @@
                 <h5 class="script-font wow fadeInUp" data-wow-delay="0.2s">Hi! This is..</h5>
                 <h2 class="head-title wow fadeInUp" data-wow-delay="0.4s">F I N T A S K</h2>
                 <p class="script-font wow fadeInUp" data-wow-delay="0.6s">Stay organized, wherever you are</p>
-                <ul class="social-icon wow fadeInUp" data-wow-delay="0.8s">
-                  <li>
-                    <a class="facebook" href="#"><i class="icon-social-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a class="twitter" href="#"><i class="icon-social-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a class="instagram" href="#"><i class="icon-social-instagram"></i></a>
-                  </li>
-                  <li>
-                    <a class="linkedin" href="#"><i class="icon-social-linkedin"></i></a>
-                  </li>
-                  <li>
-                    <a class="google" href="#"><i class="icon-social-google"></i></a>
-                  </li>
-                </ul>
-
                 <ul>
                   <li class="header-button wow fadeInUp" data-wow-delay="1s">
                     <a class="btn btn-common" href="{{ route('login') }}"></i>    Login !  </a>
