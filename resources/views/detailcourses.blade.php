@@ -14,15 +14,21 @@
 </style>
 
 <div class="container">
+    @if(session()->get('success'))
+    <div class="alert alert-success">
+        {{ session()->get('success') }}
+    </div><br />
+    @endif
     <h2>Add Detail Courses</h2>
 
-        <form action="/action_page.php">
+        <form method="post" action="/detailcourses">
+            @csrf
             Course Name :<br>
-            <input type="text" name="coursename" value="Course Name : (ex) Mathematics">
+            <input type="text" name="coursename" placeholder="Course Name : (ex) Mathematics">
             <br>
             Content:
             <br>
-            <input type="text" name="contentcourse" value="Write your content">
+            <input type="text" name="contentcourse" placeholder="Write your content">
             <br><br>
             <input type="submit" value="Submit">
 
