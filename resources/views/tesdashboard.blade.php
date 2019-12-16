@@ -99,7 +99,6 @@
   <br/>
   <br/>
 
-  <div class="d-flex justify-content-center">
     <h1>Welcome!</h1>
 <p>Start adding your first course by clicking <a href="{{ route('detailcourses.create') }}">here</a></p>
 <br/>
@@ -130,6 +129,5 @@
     <!-- /.card -->
   </div>
   @endforeach
-  </div>
 </body>
 </html>
