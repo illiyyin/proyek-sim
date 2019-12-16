@@ -23,14 +23,19 @@ Route::get('/detail', function () {
     return view('detail');
 });
 
-Route::get('/detailcourses', function () {
-    return view('detailcourses');
-})->name('addcourses')->middleware('auth');
+// Route::get('/detailcourses', function () {
+//     return view('detailcourses');
+// })->name('addcourses')->middleware('auth');
 
-Route::post('/detailcourses', 'DetailcoursesController@save')->name('DetailcoursesController.save');
+// Route::post('/detailcourses', 'DetailcoursesController@save')->name('DetailcoursesController.save');
 
-// Debugging landing page only
+Route::resource('detailcourses', 'DetailcoursesController')->middleware('auth');
+// Debugging only
 // Route::get('/landing', function() {
 //     return view('landing');
+// });
+
+// Route::get('/tesdashboard', function(){
+//     return view('tesdashboard');
 // });
 

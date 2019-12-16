@@ -9,10 +9,15 @@ class DetailcoursesController extends Controller
 {
     public function index()
     {
+        $data = Detailcoursesmodel::all();
+        return view('tesdashboard', compact('data'));
+    }
+
+    public function create(){
         return view('detailcourses');
     }
 
-    public function save(Request $request){
+    public function store(Request $request){
         $this->validate($request, [
             'coursename' => 'required|max:255|string',
             'contentcourse' => 'required|max:255|string'
@@ -21,6 +26,7 @@ class DetailcoursesController extends Controller
             'coursename' => $request->get('coursename'),
             'contentcourse' => $request->get('contentcourse')
         ]);
+        $detailcourses->save();
         return redirect('/detailcourses')->with('success', 'Mata pelajaran baru telah ditambahkan');
     }
 }
