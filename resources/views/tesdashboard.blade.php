@@ -100,20 +100,30 @@
   <br/>
 
     <h1>Welcome!</h1>
-<p>Start adding your first course by clicking <a href="{{ route('detailcourses.create') }}">here</a></p>
+<p>Start adding your courses by clicking <a href="{{ route('detailcourses.create') }}">here</a></p>
 <br/>
 <br/>
 <br/>
 
+<div class="container">
 @foreach ($data as $n)
-
-<div class="col-md-6">
+<div class="col-md-6 mx-auto">
     <!-- Box Comment -->
     <div class="card card-widget">
       <div class="card-header">
         <div class="user-block">
           <span class="username">{{ $n->coursename }}</span>
         <span class="description">{{ $n->created_at }}</span>
+        </div>
+        <div class="card-tools">
+        <form action="{{route('detailcourses.destroy', $n->id)}}" method="post">
+          {{ csrf_field() }}
+          {{ method_field('DELETE') }}
+        <button type="button" class="btn btn-tool"><a href="{{ route('detailcourses.edit', $n->id) }}"><i class="fas fa-edit"></i></a>
+          </button>
+          <button type="submit" class="btn btn-tool" onclick="return confirm('Yakin ingin menghapus catatan?')"><i class="fas fa-trash-alt"></i>
+          </button>
+        </form>
         </div>
         <!-- /.user-block -->
       </div>
@@ -129,5 +139,6 @@
     <!-- /.card -->
   </div>
   @endforeach
+</div>
 </body>
 </html>

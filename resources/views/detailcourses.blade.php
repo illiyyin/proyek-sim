@@ -11,28 +11,50 @@
     border-radius: 2px;
     resize: vertical;
 }
+
+.form-style-5{
+	max-width: 500px;
+	padding: 10px 20px;
+	background: #DCC0EC;
+	margin: 10px auto;
+	padding: 20px;
+	background: #DCC0EC;
+	border-radius: 8px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.body {
+  background-image: url( {{ asset('landingstyle/images/wall.jpg') }});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 </style>
 
+<body class="body">
 <div class="container">
     @if(session()->get('success'))
     <div class="alert alert-success">
         {{ session()->get('success') }}
     </div><br />
     @endif
-    <h2>Add Detail Courses</h2>
+    <h2 style="padding-left:300px">Add Detail Courses</h2>
 
-        <form method="post" action="/detailcourses">
-            @csrf
-            Course Name :<br>
-            <input type="text" name="coursename" placeholder="Course Name : (ex) Mathematics">
-            <br>
-            Content:
-            <br>
-            <input type="text" name="contentcourse" placeholder="Write your content">
-            <br><br>
-            <input type="submit" value="Submit">
+        <div class="form-style-5">
+            <form method="post" action="/detailcourses">
+                @csrf
+                Course Name :<br>
+                <input type="text" name="coursename" placeholder="Course Name : (ex) Mathematics">
+                <br>
+                Content:
+                <br>
+                <input type="text" name="contentcourse" placeholder="Write your content">
+                <br><br>
+                <button type="submit" style="margin:auto">Submit</button>
 
-        </form> 
-
+            </form> 
+        </div>
 </div>
+</body>
 @endsection

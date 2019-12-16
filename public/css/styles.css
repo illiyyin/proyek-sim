@@ -640,8 +640,8 @@ input[type='checkbox'] {
 }
 
 .navbar-custom .navbar-brand.logo-image img {
-    width: 7.4375rem;
-	height: 2rem;
+    width: 11rem;
+	height: 4rem;
 }
 
 .navbar-custom .navbar-brand.logo-text {
@@ -1938,7 +1938,7 @@ a:hover.back-to-top {
 
 	/* Request */
 	.form-1 {
-		padding-top: 7.5rem;
+		padding-top: 12.5rem;
 	}
 
 	.form-1 .text-container {
@@ -2038,7 +2038,7 @@ a:hover.back-to-top {
 	}
 
 	.header .text-container {
-		margin-top: 5.375rem;
+		margin-top: 2rem;
 		margin-left: 1rem;
 		margin-right: 2rem;
 	}
@@ -2181,8 +2181,5 @@ a:hover.back-to-top {
 		margin-left: 1.75rem;
 	}
 	/* end of extra pages */
-}
-.atas{
-	margin-top: 50px;
 }
 /* end of min-width width 1200px */

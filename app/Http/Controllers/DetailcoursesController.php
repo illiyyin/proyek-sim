@@ -27,6 +27,25 @@ class DetailcoursesController extends Controller
             'contentcourse' => $request->get('contentcourse')
         ]);
         $detailcourses->save();
-        return redirect('/detailcourses')->with('success', 'Mata pelajaran baru telah ditambahkan');
+        return redirect()->route('detailcourses.index')->with('success', 'Mata pelajaran baru telah ditambahkan');
+    }
+
+    public function edit($id){
+        $data = Detailcoursesmodel::where('id', $id)->get();
+        return view('editcourse', compact('data'));
+    }
+
+    public function update(Request $request, $id){
+        $data = Detailcoursesmodel::where('id', $id)->first();
+        $data->coursename = $request->coursename;
+        $data->contentcourse = $request->contentcourse;
+        $data->save();
+        return redirect()->route('detailcourses.index')->with('alert-success', 'Catatan berhasil diupdate!');
+    }
+
+    public function destroy($id){
+        $data = Detailcoursesmodel::where('id',$id)->first();
+        $data->delete();
+        return redirect()->route('detailcourses.index')->with('alert-success', 'Catatan berhasil dihapus!');
     }
 }
